@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="pers.sanne.dao.CategoryMapper">
+  <resultMap id="BaseResultMap" type="pers.sanne.domain.Category">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <id column="user_id" jdbcType="INTEGER" property="userId" />
+    <result column="class" jdbcType="VARCHAR" property="className" />
+  </resultMap>
+
+</mapper>
