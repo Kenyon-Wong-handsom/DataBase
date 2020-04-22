@@ -24,5 +24,21 @@ public class UserTest extends MapperTest {
         user.setPassword("123456");
         int i = userService.addUser(user);
     }
+    @Test
+    public void testAddUser1() {
+        User user = new User();
+        user.setEmail("8888888@qq.com");
+        user.setName("skenyon");
+        user.setPassword("234556");
+        int i = userService.addUser(user);
+    }
+    @Test
+    public void testGetUser() {
+        User user = new User();
+        user.getEmail();
+        user.getPassword();
+        user.getName();
+        //int i = userService.getUser(user);
+    }
 
 }

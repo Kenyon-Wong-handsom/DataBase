@@ -16,4 +16,8 @@ public class UserService {
     public int addUser(User user) {
         return userMapper.addUser(user);
     }
+    public int getUser(int id) {
+        return id;
+    }
+
 }

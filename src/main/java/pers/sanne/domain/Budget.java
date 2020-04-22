@@ -6,6 +6,7 @@ public class Budget {
     private Integer amount;
 
     public Integer getCategoryId() {
+
         return categoryId;
     }
 

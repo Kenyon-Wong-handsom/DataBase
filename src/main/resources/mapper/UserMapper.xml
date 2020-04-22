@@ -7,11 +7,22 @@
         <result column="password" jdbcType="VARCHAR" property="password"/>
         <result column="name" jdbcType="VARCHAR" property="name"/>
     </resultMap>
-
+    <!-- 修改用户 -->
+    <update id="updateUser" parameterType="pers.sanne.domain.User">
+		update user set email=#{email} password=#{password} name=#{uname}   where id= #{id};
+	</update>
+    <!-- 查询用户 -->
+    <select id="getUser" parameterType="_int" resultType="pers.sanne.domain.User">
+		select * from user where id= #{id};
+	</select>
     <!-- 添加用户 -->
     <insert id="addUser" parameterType="pers.sanne.domain.User">
         insert into account.user(email, password, name) values (#{email}, #{password}, #{name});
     </insert>
+    <!-- 删除用户 -->
+    <delete id="deleteUser" parameterType="pers.sanne.domain.User">
+		delete from user where id= #{id};
+	</delete>
 
 
 </mapper>
