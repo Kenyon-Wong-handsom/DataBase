@@ -31,7 +31,7 @@ DROP TABLE IF EXISTS `budget`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `budget` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) NOT NULL,
   `category_id` int(11) DEFAULT NULL,
   `amount` int(11) NOT NULL,
@@ -60,7 +60,7 @@ DROP TABLE IF EXISTS `category`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `category` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) NOT NULL,
   `class` varchar(16) NOT NULL,
   PRIMARY KEY (`id`,`user_id`),
@@ -86,7 +86,7 @@ DROP TABLE IF EXISTS `record`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `record` (
-  `id` int(11) NOT NULL,
+  `id` int(11) NOT NULL AUTO_INCREMENT,
   `user_id` int(11) NOT NULL,
   `category_id` int(11) DEFAULT NULL,
   `amount` int(11) NOT NULL,

@@ -40,4 +40,15 @@ public class User {
     public void setName(String name) {
         this.name = name == null ? null : name.trim();
     }
+
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                ", name='" + name + '\'' +
+                '}';
+    }
 }

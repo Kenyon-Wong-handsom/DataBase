@@ -81,4 +81,13 @@ public class Message implements Serializable {
     public void setData(Map<String, Object> data) {
         this.data = data;
     }
+
+    @Override
+    public String toString() {
+        return "Message{" +
+                "status=" + status +
+                ", message='" + message + '\'' +
+                ", data=" + data +
+                '}';
+    }
 }

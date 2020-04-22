@@ -3,6 +3,8 @@ package pers.sanne.domain;
 import java.util.Date;
 
 public class Record {
+    private Integer userId;
+
     private Integer categoryId;
 
     private Integer amount;
@@ -12,6 +14,22 @@ public class Record {
     private String remark;
 
     private Boolean isNegative;
+
+    public Integer getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Integer userId) {
+        this.userId = userId;
+    }
+
+    public Boolean getNegative() {
+        return isNegative;
+    }
+
+    public void setNegative(Boolean negative) {
+        isNegative = negative;
+    }
 
     public Integer getCategoryId() {
         return categoryId;
@@ -51,5 +69,17 @@ public class Record {
 
     public void setIsNegative(Boolean isNegative) {
         this.isNegative = isNegative;
+    }
+
+    @Override
+    public String toString() {
+        return "Record{" +
+                "userId=" + userId +
+                ", categoryId=" + categoryId +
+                ", amount=" + amount +
+                ", date=" + date +
+                ", remark='" + remark + '\'' +
+                ", isNegative=" + isNegative +
+                '}';
     }
 }

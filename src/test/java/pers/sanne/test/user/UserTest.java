@@ -1,5 +1,6 @@
 package pers.sanne.test.user;
 
+import org.junit.Assert;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import pers.sanne.domain.User;
@@ -22,7 +23,9 @@ public class UserTest extends MapperTest {
         user.setEmail("123456@qq.com");
         user.setName("sanne");
         user.setPassword("123456");
-        int i = userService.addUser(user);
+        int result = userService.addUser(user);
+        // 断言
+        Assert.assertEquals(1, result);
     }
     @Test
     public void testAddUser1() {
