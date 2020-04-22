@@ -24,13 +24,13 @@ public class UserController {
      */
     @RequestMapping(value = "/user", method = RequestMethod.POST)
     @ResponseBody
-    public Message addUser(User user) {
+    public Message addUser(@ModelAttribute User user) {
         Message message = null;
         // 返回 i 是操作数据库受影响的行数
-        int i = userService.addUser(user);
-        if (i == 0) {
+        int result = userService.addUser(user);
+        if (result == 0) {
             message = Message.fail();
-        } else if (i == 1) {
+        } else if (result == 1) {
             message = Message.success();
         }
         return message;

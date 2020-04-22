@@ -34,7 +34,8 @@
     <!--  配置批量操作的SqlSeesion  -->
     <bean id="sqlSession"  class="org.mybatis.spring.SqlSessionTemplate">
         <constructor-arg name="sqlSessionFactory" ref="sqlSessionFactoryBean"></constructor-arg>
-        <constructor-arg name="executorType" value="BATCH"></constructor-arg>
+        <!--   下面的注释会提高效率，但导致insert语法返回值一直为-2147482646     -->
+        <!--        <constructor-arg name="executorType" value="BATCH"></constructor-arg>-->
     </bean>
 
     <!--  整合mybatis  -->

@@ -1,8 +1,6 @@
 package pers.sanne.http.user;
 
 import org.junit.Test;
-import org.springframework.test.web.servlet.MvcResult;
-import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import pers.sanne.http.HttpTest;
 
 /**
@@ -15,9 +13,6 @@ public class UserHttpTest extends HttpTest {
      */
     @Test
     public void testAddUser() throws Exception {
-        MvcResult result = mockMvc.perform(MockMvcRequestBuilders
-                .post("/user")
-//                .content()
-        ).andReturn();
+
     }
 }
