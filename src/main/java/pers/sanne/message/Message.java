@@ -47,6 +47,17 @@ public class Message implements Serializable {
         return message;
     }
 
+    /**
+     * 默认失败模板
+     * @return
+     */
+    public static Message fail() {
+        Message message = new Message();
+        message.setStatus(500);
+        message.setMessage("fail");
+        return message;
+    }
+
     public int getStatus() {
         return status;
     }
