@@ -6,9 +6,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="ssm" />
         <module name="DataBase" />
         <module name="ssm_test" />
-        <module name="ssm" />
       </profile>
     </annotationProcessing>
   </component>

@@ -17,7 +17,7 @@ public class User {
         this.id = id;
     }
 
-    public String getEmail() {
+    public String getEmail(String s) {
         return email;
     }
 

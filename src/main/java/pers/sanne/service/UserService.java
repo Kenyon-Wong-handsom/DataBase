@@ -16,8 +16,17 @@ public class UserService {
     public int addUser(User user) {
         return userMapper.addUser(user);
     }
-    public int getUser(int id) {
-        return id;
+    public User getUser(int id) {
+        return userMapper.getUser(id);
     }
 
+    public int updateUser(User user) {
+        return userMapper.updateUser(user);
+    }
+    public int deleteUser(int id){
+        return userMapper.deleteUser(id);
+    }
+    public int getUserIDByEmail(String email){
+        return userMapper.getUserIDByEmail(email);
+    }
 }

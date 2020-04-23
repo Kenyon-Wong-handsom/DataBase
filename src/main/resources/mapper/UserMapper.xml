@@ -9,10 +9,10 @@
     </resultMap>
     <!-- 修改用户 -->
     <update id="updateUser" parameterType="pers.sanne.domain.User">
-		update user set email=#{email} password=#{password} name=#{uname}   where id= #{id};
+		update user set email=#{email},password=#{password},name=#{name}   where id= #{id};
 	</update>
     <!-- 查询用户 -->
-    <select id="getUser" parameterType="_int" resultType="pers.sanne.domain.User">
+    <select id="getUser" parameterType="_int" resultMap="BaseResultMap">
 		select * from user where id= #{id};
 	</select>
     <!-- 添加用户 -->
@@ -23,6 +23,10 @@
     <delete id="deleteUser" parameterType="pers.sanne.domain.User">
 		delete from user where id= #{id};
 	</delete>
+    <!-- 邮箱查询ID -->
+    <select id="getUserIDByEmail" parameterType="_int" resultMap="BaseResultMap">
+		select id from user where email= #{email};
+	</select>
 
 
 </mapper>

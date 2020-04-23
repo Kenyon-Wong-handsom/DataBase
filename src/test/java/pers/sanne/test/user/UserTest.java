@@ -8,7 +8,7 @@ import pers.sanne.service.UserService;
 import pers.sanne.test.MapperTest;
 
 /**
- *  测试User类
+ * 测试User类
  */
 public class UserTest extends MapperTest {
     @Autowired
@@ -20,28 +20,50 @@ public class UserTest extends MapperTest {
     @Test
     public void testAddUser() {
         User user = new User();
-        user.setEmail("123456@qq.com");
-        user.setName("sanne");
-        user.setPassword("123456");
+        user.setEmail("903881709@qq.com");
+        user.setName("peipei");
+        user.setPassword("168668");
         int result = userService.addUser(user);
         // 断言
         Assert.assertEquals(1, result);
     }
-    @Test
-    public void testAddUser1() {
-        User user = new User();
-        user.setEmail("8888888@qq.com");
-        user.setName("skenyon");
-        user.setPassword("234556");
-        int i = userService.addUser(user);
-    }
+
+    /*
+        测试获取用户信息
+     */
     @Test
     public void testGetUser() {
         User user = new User();
-        user.getEmail();
-        user.getPassword();
-        user.getName();
-        //int i = userService.getUser(user);
+        user = userService.getUser(18);
+        System.out.println(user);
+    }
+
+    @Test
+    public void testUpdateUser() {
+
+        User user = new User();
+        user.setId(18);
+        user.setEmail("36373839@qq.com");
+        user.setName("王勇超");
+        user.setPassword("111111111111");
+
+        int result = userService.updateUser(user);
+
+
+    }
+    @Test
+    public void testDeleteUser() {
+
+        int result = userService.deleteUser(18);
+    }
+
+    @Test
+    public void testGetUserIDByEmail() {
+
+        User user = new User();
+        String email = user.getEmail("903881709@qq.com");
+        Integer id = user.getId();
+
     }
 
 }
