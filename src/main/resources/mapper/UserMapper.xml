@@ -23,10 +23,5 @@
     <delete id="deleteUser" parameterType="pers.sanne.domain.User">
 		delete from user where id= #{id};
 	</delete>
-    <!-- 邮箱查询ID -->
-    <select id="getUserIDByEmail" parameterType="_int" resultMap="BaseResultMap">
-		select id from user where email= #{email};
-	</select>
-
 
 </mapper>

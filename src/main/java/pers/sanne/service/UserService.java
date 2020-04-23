@@ -26,7 +26,5 @@ public class UserService {
     public int deleteUser(int id){
         return userMapper.deleteUser(id);
     }
-    public int getUserIDByEmail(String email){
-        return userMapper.getUserIDByEmail(email);
-    }
+
 }

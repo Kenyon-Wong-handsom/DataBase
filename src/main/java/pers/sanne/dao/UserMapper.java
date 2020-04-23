@@ -15,7 +15,7 @@ public interface UserMapper {
     public int addUser(User user);//添加
     public int deleteUser(int id); // 删除
     public int updateUser(User user); // 修改
-    public Integer getUserIDByEmail(String email); // 查询
+
 
 
 }

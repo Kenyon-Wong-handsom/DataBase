@@ -20,9 +20,9 @@ public class UserTest extends MapperTest {
     @Test
     public void testAddUser() {
         User user = new User();
-        user.setEmail("903881709@qq.com");
-        user.setName("peipei");
-        user.setPassword("168668");
+        user.setEmail("7758268@qq.com");
+        user.setName("hasen");
+        user.setPassword("881678");
         int result = userService.addUser(user);
         // 断言
         Assert.assertEquals(1, result);
@@ -57,13 +57,6 @@ public class UserTest extends MapperTest {
         int result = userService.deleteUser(18);
     }
 
-    @Test
-    public void testGetUserIDByEmail() {
 
-        User user = new User();
-        String email = user.getEmail("903881709@qq.com");
-        Integer id = user.getId();
-
-    }
 
 }
